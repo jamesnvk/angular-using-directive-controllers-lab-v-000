@@ -19,6 +19,11 @@ function ContactCard() {
 				'<span class="username">{{ username }}</span>',
 			'</div>'
 		].join(''),
+		controller: function($scope){
+			var lowerCaseUsername = $scope.username.toLowerCase()
+			$scope.username = lowerCaseUsername
+
+		},
 		restrict: 'E'
 	};
 }
